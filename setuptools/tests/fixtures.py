@@ -66,7 +66,8 @@ def sample_project(tmp_path):
     """
     Clone the 'sampleproject' and return a path to it.
     """
-    cmd = ['git', 'clone', 'https://github.com/pypa/sampleproject']
+    cmd = ['git', 'clone', 'https://github.com/pypa/sampleproject',
+           '--branch', 'd4ee05fdc03e848ed6e7065d8fe8e833a3c8c0b2']
     try:
         subprocess.check_call(cmd, cwd=str(tmp_path))
     except Exception:
